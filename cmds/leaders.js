@@ -19,11 +19,11 @@ module.exports.run = async (bot, message, args) => {
       .setTitle("Coins Leaderboard")
     //if there are no results
     if (res.length === 0) {
-      embed.setColor("RED");
+      embed.setColor("#008080");
       embed.addField("No data found", "Please type in chat to gain coins!")
     } else if (res.length < 10) {
       //less than 10 results
-      embed.setColor("BLURPLE");
+      embed.setColor("#D2691E");
       for (i = 0; i < res.length; i++) {
         let member = message.guild.members.get(res[i].userID) || "User Left"
         if (member === "User Left") {
