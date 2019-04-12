@@ -10,7 +10,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("Информация","serverinfo,userinfo,help")
     .addField("Пригласить","https://discordapp.com/oauth2/authorize?client_id=551625781818818590&permissions=8&scope=bot")
     .setThumbnail(message.guild.iconURL)
-    .addField("Картинка :3", "https://cdn.discordapp.com/attachments/565544602665222144/565544669350723590/images.png")
+    .setImage('https://cdn.discordapp.com/attachments/565544602665222144/565544669350723590/images.png')
 
     bot.send(enbed);
 };
