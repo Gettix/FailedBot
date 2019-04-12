@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const fs = require('fs');
+const token = process.env.BOT_TOKEN;
 let config = require('./botconfig.json');
-let token = config.token;
+let token = process.env.BOT_TOKEN
 let prefix = config.prefix;
 let profile = require('./profile.json');
 
@@ -102,4 +103,4 @@ bot.on('guildMemberRemove', async member => {
   await channels.send(embed)
 })
 
-bot.login(BOT_TOKEN);
+bot.login(token);
