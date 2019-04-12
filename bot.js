@@ -102,4 +102,4 @@ bot.on('guildMemberRemove', async member => {
   await channels.send(embed)
 })
 
-bot.login(token);
+bot.login(BOT_TOKEN);
